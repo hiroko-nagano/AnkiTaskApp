@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8EE78E0674B5F2480E2334B7 /* Pods_ankiTaskApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D556C1A7BAFA414606CF5F98 /* Pods_ankiTaskApp.framework */; };
 		8F362CB424FB86A100153224 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F362CB324FB86A100153224 /* AppDelegate.swift */; };
 		8F362CB624FB86A100153224 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F362CB524FB86A100153224 /* SceneDelegate.swift */; };
 		8F362CB824FB86A100153224 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F362CB724FB86A100153224 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E42BAEBF1E42D8335F3CD30 /* Pods-ankiTaskApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ankiTaskApp.release.xcconfig"; path = "Target Support Files/Pods-ankiTaskApp/Pods-ankiTaskApp.release.xcconfig"; sourceTree = "<group>"; };
+		8E0C1C3A499190D3332430EA /* Pods-ankiTaskApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ankiTaskApp.debug.xcconfig"; path = "Target Support Files/Pods-ankiTaskApp/Pods-ankiTaskApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8F362CB024FB86A100153224 /* ankiTaskApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ankiTaskApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F362CB324FB86A100153224 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F362CB524FB86A100153224 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		8F362CBC24FB86A400153224 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F362CBF24FB86A400153224 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F362CC124FB86A400153224 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D556C1A7BAFA414606CF5F98 /* Pods_ankiTaskApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ankiTaskApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EE78E0674B5F2480E2334B7 /* Pods_ankiTaskApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		135BC8E0FD140E986F2BB596 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E0C1C3A499190D3332430EA /* Pods-ankiTaskApp.debug.xcconfig */,
+				5E42BAEBF1E42D8335F3CD30 /* Pods-ankiTaskApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		13CA7D47AAA4A886EB43CA4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D556C1A7BAFA414606CF5F98 /* Pods_ankiTaskApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8F362CA724FB86A100153224 = {
 			isa = PBXGroup;
 			children = (
 				8F362CB224FB86A100153224 /* ankiTaskApp */,
 				8F362CB124FB86A100153224 /* Products */,
+				135BC8E0FD140E986F2BB596 /* Pods */,
+				13CA7D47AAA4A886EB43CA4D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F362CC424FB86A400153224 /* Build configuration list for PBXNativeTarget "ankiTaskApp" */;
 			buildPhases = (
+				8AA4BCD9F2576A3E3025C1CC /* [CP] Check Pods Manifest.lock */,
 				8F362CAC24FB86A100153224 /* Sources */,
 				8F362CAD24FB86A100153224 /* Frameworks */,
 				8F362CAE24FB86A100153224 /* Resources */,
+				71E1067BF0C94BEE98CF223B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		71E1067BF0C94BEE98CF223B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ankiTaskApp/Pods-ankiTaskApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ankiTaskApp/Pods-ankiTaskApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ankiTaskApp/Pods-ankiTaskApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AA4BCD9F2576A3E3025C1CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ankiTaskApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8F362CAC24FB86A100153224 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		8F362CC524FB86A400153224 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E0C1C3A499190D3332430EA /* Pods-ankiTaskApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		8F362CC624FB86A400153224 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E42BAEBF1E42D8335F3CD30 /* Pods-ankiTaskApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
