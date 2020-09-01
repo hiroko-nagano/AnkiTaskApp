@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,11 @@
 		8F362CBB24FB86A100153224 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F362CB924FB86A100153224 /* Main.storyboard */; };
 		8F362CBD24FB86A400153224 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F362CBC24FB86A400153224 /* Assets.xcassets */; };
 		8F362CC024FB86A400153224 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F362CBE24FB86A400153224 /* LaunchScreen.storyboard */; };
+		8F362CC824FB8E3100153224 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F362CC724FB8E3100153224 /* ListViewController.swift */; };
+		8F362CCA24FB993300153224 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F362CC924FB993300153224 /* AddViewController.swift */; };
+		8F362CCC24FBAF3800153224 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F362CCB24FBAF3800153224 /* Task.swift */; };
+		8FE0336A24FE18730044FF0A /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0336824FE18730044FF0A /* ListTableViewCell.swift */; };
+		8FE0336B24FE18730044FF0A /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE0336924FE18730044FF0A /* ListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +32,11 @@
 		8F362CBC24FB86A400153224 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F362CBF24FB86A400153224 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F362CC124FB86A400153224 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F362CC724FB8E3100153224 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		8F362CC924FB993300153224 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		8F362CCB24FBAF3800153224 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		8FE0336824FE18730044FF0A /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		8FE0336924FE18730044FF0A /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		D556C1A7BAFA414606CF5F98 /* Pods_ankiTaskApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ankiTaskApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -48,7 +58,6 @@
 				8E0C1C3A499190D3332430EA /* Pods-ankiTaskApp.debug.xcconfig */,
 				5E42BAEBF1E42D8335F3CD30 /* Pods-ankiTaskApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,7 +92,12 @@
 			children = (
 				8F362CB324FB86A100153224 /* AppDelegate.swift */,
 				8F362CB524FB86A100153224 /* SceneDelegate.swift */,
+				8F362CCB24FBAF3800153224 /* Task.swift */,
+				8F362CC724FB8E3100153224 /* ListViewController.swift */,
+				8FE0336824FE18730044FF0A /* ListTableViewCell.swift */,
+				8FE0336924FE18730044FF0A /* ListTableViewCell.xib */,
 				8F362CB724FB86A100153224 /* ViewController.swift */,
+				8F362CC924FB993300153224 /* AddViewController.swift */,
 				8F362CB924FB86A100153224 /* Main.storyboard */,
 				8F362CBC24FB86A400153224 /* Assets.xcassets */,
 				8F362CBE24FB86A400153224 /* LaunchScreen.storyboard */,
@@ -153,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F362CC024FB86A400153224 /* LaunchScreen.storyboard in Resources */,
+				8FE0336B24FE18730044FF0A /* ListTableViewCell.xib in Resources */,
 				8F362CBD24FB86A400153224 /* Assets.xcassets in Resources */,
 				8F362CBB24FB86A100153224 /* Main.storyboard in Resources */,
 			);
@@ -207,8 +222,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FE0336A24FE18730044FF0A /* ListTableViewCell.swift in Sources */,
+				8F362CCA24FB993300153224 /* AddViewController.swift in Sources */,
 				8F362CB824FB86A100153224 /* ViewController.swift in Sources */,
 				8F362CB424FB86A100153224 /* AppDelegate.swift in Sources */,
+				8F362CC824FB8E3100153224 /* ListViewController.swift in Sources */,
+				8F362CCC24FBAF3800153224 /* Task.swift in Sources */,
 				8F362CB624FB86A100153224 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
