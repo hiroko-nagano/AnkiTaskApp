@@ -34,12 +34,16 @@ class ListTableViewCell: UITableViewCell {
     
     func setTaskArray(_ task: Task) {
         
-        
-        
         let cellText = task.title
         cellLabel.text = "\(cellText)"
         
-        
+        if task.finishbutton == false {
+            cellLabel.textColor = UIColor.gray
+            finishButton.tintColor = UIColor.gray
+        } else {
+            cellLabel.textColor = UIColor.black
+            finishButton.tintColor = UIColor.systemBlue
+        }
     }
     
 }

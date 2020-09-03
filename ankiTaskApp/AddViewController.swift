@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import SVProgressHUD
 
 class AddViewController: UIViewController {
     
@@ -35,22 +36,7 @@ class AddViewController: UIViewController {
     }
     
     
-    
     override func viewWillDisappear(_ animated: Bool) {
-        try! realm.write {
-            self.task.title = self.titleTextField.text!
-            self.task.startpage = self.startPage.text!
-            self.task.lastpage = self.lastPage.text!
-            self.task.memo = self.memoTextView.text!
-            
-            if self.studyUISwich.isOn  {
-                self.task.swich = true
-            } else {
-                self.task.swich = false
-            }
-                    
-            self.realm.add(self.task, update: .modified)
-        }
         super.viewWillDisappear(animated)
     }
     
@@ -62,9 +48,26 @@ class AddViewController: UIViewController {
     @IBAction func addButton(_ sender: Any) {
         if let titleText = titleTextField.text {
             if titleText.isEmpty {
-                print("タイトルなし")
+                SVProgressHUD.showError(withStatus: "タイトルを入力してください。")
+                SVProgressHUD.dismiss(withDelay: 2)
                 return
             } else {
+                try! realm.write {
+                    self.task.title = self.titleTextField.text!
+                    self.task.startpage = self.startPage.text!
+                    self.task.lastpage = self.lastPage.text!
+                    self.task.memo = self.memoTextView.text!
+                    
+                    if self.studyUISwich.isOn  {
+                        self.task.swich = true
+                    } else {
+                        self.task.swich = false
+                    }
+                    
+                    self.realm.add(self.task, update: .modified)
+                }
+                SVProgressHUD.showSuccess(withStatus:"追加しました")
+                SVProgressHUD.dismiss(withDelay: 2)
                 self.navigationController?.popViewController(animated: true)
             }
         }

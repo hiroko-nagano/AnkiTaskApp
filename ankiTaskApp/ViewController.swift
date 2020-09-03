@@ -23,6 +23,7 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        calendar.select(Date())
     }
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
@@ -56,19 +57,22 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
         let month5 = tmpDate.component(.month, from: threemonth)
         let day5 = tmpDate.component(.day, from: threemonth)
         topeddate5 = "\(year5)/\(month5)/\(day5)"
+        
+        let listViewController:ListViewController = self.storyboard?.instantiateViewController(identifier: "List") as! ListViewController
+        listViewController.receiveddate = topeddate
+        listViewController.receiveddate2 = topeddate2
+        listViewController.receiveddate3 = topeddate3
+        listViewController.receiveddate4 = topeddate4
+        listViewController.receiveddate5 = topeddate5
+        self.navigationController?.pushViewController(listViewController, animated: true)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let listViewController:ListViewController = segue.destination as! ListViewController
-        if segue.identifier == "editSegue" {
+   // override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //    let listViewController:ListViewController = segue.destination as! ListViewController
+     //   if segue.identifier == "editSegue" {
             
-            listViewController.receiveddate = topeddate
-            listViewController.receiveddate2 = topeddate2
-            listViewController.receiveddate3 = topeddate3
-            listViewController.receiveddate4 = topeddate4
-            listViewController.receiveddate5 = topeddate5
-        }
-    }
+      //  }
+   // }
     
     
     

@@ -31,6 +31,8 @@ class Task: Object {
     @objc dynamic var date4 = ""
     //３ヶ月後
     @objc dynamic var date5 = ""
+    //終了ボタン
+    @objc dynamic var finishbutton: Bool = true
     
     
     

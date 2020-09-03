@@ -8,5 +8,6 @@ target 'ankiTaskApp' do
   # Pods for ankiTaskApp
     pod 'RealmSwift','5.1.0'
     pod 'FSCalendar'
+    pod 'SVProgressHUD','2.2.5'
 
 end

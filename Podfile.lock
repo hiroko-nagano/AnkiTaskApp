@@ -5,22 +5,26 @@ PODS:
   - Realm/Headers (5.1.0)
   - RealmSwift (5.1.0):
     - Realm (= 5.1.0)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - FSCalendar
   - RealmSwift (= 5.1.0)
+  - SVProgressHUD (= 2.2.5)
 
 SPEC REPOS:
   trunk:
     - FSCalendar
     - Realm
     - RealmSwift
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
   FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
   Realm: bdea546851e37b4cf0a2400cef115c7c26fda488
   RealmSwift: 70945aa168db93b215c460e9c8ef680261aa28af
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 4a16482711f69f29085bc5e8c9110a16d83d56e8
+PODFILE CHECKSUM: b7ea3b8eb0ac60ba54adf1487edd8ecbdf5f57f1
 
 COCOAPODS: 1.9.3

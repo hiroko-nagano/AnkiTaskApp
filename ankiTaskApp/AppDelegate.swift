@@ -10,6 +10,9 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    //SVprogressHUDをXcode11で実行するための調節コード
+    var window: UIWindow?
 
 
 
