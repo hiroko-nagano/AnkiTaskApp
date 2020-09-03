@@ -38,11 +38,11 @@ class ListTableViewCell: UITableViewCell {
         cellLabel.text = "\(cellText)"
         
         if task.finishbutton == false {
-            cellLabel.textColor = UIColor.gray
-            finishButton.tintColor = UIColor.gray
+            self.cellLabel.textColor = UIColor.gray
+            self.finishButton.tintColor = UIColor.gray
         } else {
-            cellLabel.textColor = UIColor.black
-            finishButton.tintColor = UIColor.systemBlue
+            self.cellLabel.textColor = UIColor.black
+            self.finishButton.tintColor = UIColor.systemBlue
         }
     }
     

@@ -78,28 +78,21 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.setTaskArray(taskArray[indexPath.row])
         //セル内のボタンのアクション
         cell.finishButton.addTarget(self, action: #selector(tapfinishButton(_:forEvent:)), for: .touchUpInside)
-        
-        
-        
         return cell
     }
     
     @objc func tapfinishButton(_ sender: UIButton, forEvent event: UIEvent) {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! ListTableViewCell
+        
         let touch = event.allTouches?.first
         let point = touch!.location(in: self.tableView)
         let indexPath = tableView.indexPathForRow(at: point)
         let listDate = taskArray[indexPath!.row]
         
         if listDate.finishbutton == false {
-            sender.isEnabled = false
+            sender.isEnabled = true
         } else {
-            sender.setTitleColor(UIColor.gray, for: .normal)
-            cell.cellLabel.textColor = UIColor.gray
-            self.tableView.reloadData()
             
             if listDate.swich == true {
-                
                 try! realm.write {
                     listDate.swich = false
                     
@@ -113,7 +106,6 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
                     task2.swich = false
                     task2.date = "\(listDate.date2)"
                     task2.finishbutton = true
-                    
                     realm.add(task2, update: .modified)
                     
                     let task3 = Task()
@@ -125,7 +117,6 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
                     task3.swich = false
                     task3.date = "\(listDate.date3)"
                     task3.finishbutton = true
-                    
                     realm.add(task3, update: .modified)
                     
                     let task4 = Task()
@@ -137,7 +128,6 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
                     task4.swich = false
                     task4.date = "\(listDate.date4)"
                     task4.finishbutton = true
-                    
                     realm.add(task4, update: .modified)
                     
                     let task5 = Task()
@@ -149,12 +139,12 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
                     task5.swich = false
                     task5.date = "\(listDate.date5)"
                     task5.finishbutton = true
-                    
                     realm.add(task5, update: .modified)
                     
                     listDate.finishbutton = false
                     SVProgressHUD.showSuccess(withStatus: "復習が追加されました")
                     SVProgressHUD.dismiss(withDelay: 2)
+                    
                 }
                 
             } else {
@@ -163,6 +153,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
                 }
             }
         }
+        self.tableView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -175,12 +166,6 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "cellSegue", sender: nil)
-        
-        
-        let listDate = taskArray[indexPath.row]
-        print(listDate.finishbutton)
-        
-        
     }
     
     //セルが削除可能である
